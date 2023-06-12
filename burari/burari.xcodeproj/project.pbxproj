@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEB4341A2A3765F70062F6A4 /* burariApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434192A3765F70062F6A4 /* burariApp.swift */; };
+		CEB4341C2A3765F70062F6A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4341B2A3765F70062F6A4 /* ContentView.swift */; };
+		CEB4341E2A3765F80062F6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB4341D2A3765F80062F6A4 /* Assets.xcassets */; };
+		CEB434212A3765F80062F6A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB434202A3765F80062F6A4 /* Preview Assets.xcassets */; };
+		CEB4342B2A3765F80062F6A4 /* burariTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4342A2A3765F80062F6A4 /* burariTests.swift */; };
+		CEB434352A3765F80062F6A4 /* burariUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434342A3765F80062F6A4 /* burariUITests.swift */; };
+		CEB434372A3765F80062F6A4 /* burariUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEB434272A3765F80062F6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEB4340E2A3765F70062F6A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB434152A3765F70062F6A4;
+			remoteInfo = burari;
+		};
+		CEB434312A3765F80062F6A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEB4340E2A3765F70062F6A4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB434152A3765F70062F6A4;
+			remoteInfo = burari;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEB434162A3765F70062F6A4 /* burari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = burari.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB434192A3765F70062F6A4 /* burariApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariApp.swift; sourceTree = "<group>"; };
+		CEB4341B2A3765F70062F6A4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEB4341D2A3765F80062F6A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB434202A3765F80062F6A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEB434262A3765F80062F6A4 /* burariTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = burariTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB4342A2A3765F80062F6A4 /* burariTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariTests.swift; sourceTree = "<group>"; };
+		CEB434302A3765F80062F6A4 /* burariUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = burariUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB434342A3765F80062F6A4 /* burariUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariUITests.swift; sourceTree = "<group>"; };
+		CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEB434132A3765F70062F6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB434232A3765F80062F6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB4342D2A3765F80062F6A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEB4340D2A3765F70062F6A4 = {
+			isa = PBXGroup;
+			children = (
+				CEB434182A3765F70062F6A4 /* burari */,
+				CEB434292A3765F80062F6A4 /* burariTests */,
+				CEB434332A3765F80062F6A4 /* burariUITests */,
+				CEB434172A3765F70062F6A4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB434172A3765F70062F6A4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB434162A3765F70062F6A4 /* burari.app */,
+				CEB434262A3765F80062F6A4 /* burariTests.xctest */,
+				CEB434302A3765F80062F6A4 /* burariUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB434182A3765F70062F6A4 /* burari */ = {
+			isa = PBXGroup;
+			children = (
+				CEB434192A3765F70062F6A4 /* burariApp.swift */,
+				CEB4341B2A3765F70062F6A4 /* ContentView.swift */,
+				CEB4341D2A3765F80062F6A4 /* Assets.xcassets */,
+				CEB4341F2A3765F80062F6A4 /* Preview Content */,
+			);
+			path = burari;
+			sourceTree = "<group>";
+		};
+		CEB4341F2A3765F80062F6A4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CEB434202A3765F80062F6A4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEB434292A3765F80062F6A4 /* burariTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEB4342A2A3765F80062F6A4 /* burariTests.swift */,
+			);
+			path = burariTests;
+			sourceTree = "<group>";
+		};
+		CEB434332A3765F80062F6A4 /* burariUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEB434342A3765F80062F6A4 /* burariUITests.swift */,
+				CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */,
+			);
+			path = burariUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB434152A3765F70062F6A4 /* burari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB4343A2A3765F80062F6A4 /* Build configuration list for PBXNativeTarget "burari" */;
+			buildPhases = (
+				CEB434122A3765F70062F6A4 /* Sources */,
+				CEB434132A3765F70062F6A4 /* Frameworks */,
+				CEB434142A3765F70062F6A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = burari;
+			productName = burari;
+			productReference = CEB434162A3765F70062F6A4 /* burari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEB434252A3765F80062F6A4 /* burariTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB4343D2A3765F80062F6A4 /* Build configuration list for PBXNativeTarget "burariTests" */;
+			buildPhases = (
+				CEB434222A3765F80062F6A4 /* Sources */,
+				CEB434232A3765F80062F6A4 /* Frameworks */,
+				CEB434242A3765F80062F6A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEB434282A3765F80062F6A4 /* PBXTargetDependency */,
+			);
+			name = burariTests;
+			productName = burariTests;
+			productReference = CEB434262A3765F80062F6A4 /* burariTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEB4342F2A3765F80062F6A4 /* burariUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB434402A3765F80062F6A4 /* Build configuration list for PBXNativeTarget "burariUITests" */;
+			buildPhases = (
+				CEB4342C2A3765F80062F6A4 /* Sources */,
+				CEB4342D2A3765F80062F6A4 /* Frameworks */,
+				CEB4342E2A3765F80062F6A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEB434322A3765F80062F6A4 /* PBXTargetDependency */,
+			);
+			name = burariUITests;
+			productName = burariUITests;
+			productReference = CEB434302A3765F80062F6A4 /* burariUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB4340E2A3765F70062F6A4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CEB434152A3765F70062F6A4 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					CEB434252A3765F80062F6A4 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CEB434152A3765F70062F6A4;
+					};
+					CEB4342F2A3765F80062F6A4 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CEB434152A3765F70062F6A4;
+					};
+				};
+			};
+			buildConfigurationList = CEB434112A3765F70062F6A4 /* Build configuration list for PBXProject "burari" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB4340D2A3765F70062F6A4;
+			productRefGroup = CEB434172A3765F70062F6A4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB434152A3765F70062F6A4 /* burari */,
+				CEB434252A3765F80062F6A4 /* burariTests */,
+				CEB4342F2A3765F80062F6A4 /* burariUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEB434142A3765F70062F6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB434212A3765F80062F6A4 /* Preview Assets.xcassets in Resources */,
+				CEB4341E2A3765F80062F6A4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB434242A3765F80062F6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB4342E2A3765F80062F6A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEB434122A3765F70062F6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB4341C2A3765F70062F6A4 /* ContentView.swift in Sources */,
+				CEB4341A2A3765F70062F6A4 /* burariApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB434222A3765F80062F6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB4342B2A3765F80062F6A4 /* burariTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB4342C2A3765F80062F6A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB434352A3765F80062F6A4 /* burariUITests.swift in Sources */,
+				CEB434372A3765F80062F6A4 /* burariUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEB434282A3765F80062F6A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB434152A3765F70062F6A4 /* burari */;
+			targetProxy = CEB434272A3765F80062F6A4 /* PBXContainerItemProxy */;
+		};
+		CEB434322A3765F80062F6A4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB434152A3765F70062F6A4 /* burari */;
+			targetProxy = CEB434312A3765F80062F6A4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEB434382A3765F80062F6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEB434392A3765F80062F6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB4343B2A3765F80062F6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"burari/Preview Content\"";
+				DEVELOPMENT_TEAM = TRFV4K7ZHM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shouhukutei.burari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB4343C2A3765F80062F6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"burari/Preview Content\"";
+				DEVELOPMENT_TEAM = TRFV4K7ZHM;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shouhukutei.burari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEB4343E2A3765F80062F6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TRFV4K7ZHM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shouhukutei.burariTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/burari.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/burari";
+			};
+			name = Debug;
+		};
+		CEB4343F2A3765F80062F6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TRFV4K7ZHM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shouhukutei.burariTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/burari.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/burari";
+			};
+			name = Release;
+		};
+		CEB434412A3765F80062F6A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TRFV4K7ZHM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shouhukutei.burariUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = burari;
+			};
+			name = Debug;
+		};
+		CEB434422A3765F80062F6A4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = TRFV4K7ZHM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shouhukutei.burariUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = burari;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEB434112A3765F70062F6A4 /* Build configuration list for PBXProject "burari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB434382A3765F80062F6A4 /* Debug */,
+				CEB434392A3765F80062F6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB4343A2A3765F80062F6A4 /* Build configuration list for PBXNativeTarget "burari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB4343B2A3765F80062F6A4 /* Debug */,
+				CEB4343C2A3765F80062F6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB4343D2A3765F80062F6A4 /* Build configuration list for PBXNativeTarget "burariTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB4343E2A3765F80062F6A4 /* Debug */,
+				CEB4343F2A3765F80062F6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB434402A3765F80062F6A4 /* Build configuration list for PBXNativeTarget "burariUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB434412A3765F80062F6A4 /* Debug */,
+				CEB434422A3765F80062F6A4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB4340E2A3765F70062F6A4 /* Project object */;
+}
