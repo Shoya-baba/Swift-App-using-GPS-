@@ -6,6 +6,10 @@
 //
 
 import SwiftUI
+import CoreLocation
+import UIKit
+
+let locationManager = CLLocationManager()
 //class見たなやつの親。内容とその型を宣言
 //Identifiableを付与してインスタンスでid付けないとエラーになる。
 struct Record:Identifiable {
@@ -25,27 +29,47 @@ struct ContentView: View {
         
     ]
     
+   
+    
     var body: some View {
         NavigationView{
             List{
-                ForEach(records) { records in
-                    HStack{
-                        NavigationLink(destination: RecordsDetail(records: records)){
-                            records.image
-                                .resizable()
-                                .scaledToFill()
-                            //写真を丸くする
-                                .clipShape(Circle())
-                                .frame(width:50,height: 50)
-                            Text(records.title)
-                                .padding(.leading,20)
+//                Section(header:Text("怪奇一覧").font(.title2).tracking(2)){
+                Section{
+//                    HStack{
+//                        Text("怪奇一覧").font(.title2).tracking(2)
+//
+//
+//                    }.listRowBackground(Color.clear)
+                    ForEach(records) { records in
+                       
+                        HStack{
+                            NavigationLink(destination: RecordsDetail(records: records)){
+                                records.image
+                                    .resizable()
+                                    .scaledToFill()
+                                //写真を丸くする
+                                    .clipShape(Circle())
+                                    .frame(width:50,height: 50)
+                                Text(records.title)
+                                    .padding(.leading,20)
+                            }
                         }
                     }
-                }
-            }.navigationTitle(Text("記録一覧"))
+                }.navigationBarTitle(Text("怪奇一覧"),displayMode:.inline)
+//                    .navigationBarItems(
+//                        leading: Button("action",action:AddRecord())
+//                        ,
+//                        trailing: Button(action: {
+//                            AddRecord()
+//                        }) {
+//                            Image(systemName: "plus").foregroundColor(Color.red)
+//                        }
+//                    )
+            }
         }
-        
     }
+    
     
     struct RecordsDetail:View {
         let records: Record
@@ -88,6 +112,26 @@ struct ContentView: View {
     }
     
     
+    struct AddRecord: View {
+        @State var title = ""
+        @State var phenomenon = ""
+        @State var detail = ""
+        @State var place = ""
+        var body: some View {
+            NavigationView{
+                Form {
+                    TextField("遭遇した怪奇",text: $title)
+                    TextField("現象",text: $phenomenon)
+                    TextField("詳細",text: $detail)
+                    TextField("遭遇した場所",text: $place)
+                }
+                Button(action: {}) {
+                    Text("報告")
+                }
+            }.navigationBarTitle("怪奇の報告")
+        }
+    }
+    
         //navigastionlink用。選択すると次のページに飛ぶやつ。
         struct ContentView_Previews: PreviewProvider {
             static var previews: some View {
@@ -96,3 +140,9 @@ struct ContentView: View {
         }
     
 }
+//navigastionlink用。選択すると次のページに飛ぶやつ。
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

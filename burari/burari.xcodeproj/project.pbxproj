@@ -14,6 +14,7 @@
 		CEB4342B2A3765F80062F6A4 /* burariTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB4342A2A3765F80062F6A4 /* burariTests.swift */; };
 		CEB434352A3765F80062F6A4 /* burariUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434342A3765F80062F6A4 /* burariUITests.swift */; };
 		CEB434372A3765F80062F6A4 /* burariUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */; };
+		CEB434452A38C7C10062F6A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB434442A38C7C10062F6A4 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CEB434302A3765F80062F6A4 /* burariUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = burariUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB434342A3765F80062F6A4 /* burariUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariUITests.swift; sourceTree = "<group>"; };
 		CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEB434442A38C7C10062F6A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB434452A38C7C10062F6A4 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 				CEB434292A3765F80062F6A4 /* burariTests */,
 				CEB434332A3765F80062F6A4 /* burariUITests */,
 				CEB434172A3765F70062F6A4 /* Products */,
+				CEB434432A38C7C10062F6A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +129,14 @@
 				CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */,
 			);
 			path = burariUITests;
+			sourceTree = "<group>";
+		};
+		CEB434432A38C7C10062F6A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEB434442A38C7C10062F6A4 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +432,8 @@
 				DEVELOPMENT_TEAM = TRFV4K7ZHM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +463,8 @@
 				DEVELOPMENT_TEAM = TRFV4K7ZHM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
