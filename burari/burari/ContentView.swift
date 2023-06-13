@@ -30,7 +30,7 @@ struct ContentView: View {
             List{
                 ForEach(records) { records in
                     HStack{
-                        NavigationLink(destination: RecordsDetail()){
+                        NavigationLink(destination: RecordsDetail(records: records)){
                             records.image
                                 .resizable()
                                 .scaledToFill()
@@ -42,18 +42,51 @@ struct ContentView: View {
                         }
                     }
                 }
-            }.navigationTitle(Text("境界"))
+            }.navigationTitle(Text("記録一覧"))
         }
         
     }
     
     struct RecordsDetail:View {
+        let records: Record
+        
         var body:some View {
-            Text("detail test")
+            NavigationView{
+                ZStack{
+                    records.image
+                        .overlay(
+                    VStack{
+                        Text(records.title)
+                            .font(.title2)
+                            .padding(.bottom, 50)
+                            .padding(.top, 40)
+                            .tracking(2)
+                       
+                        Text(records.phenomenon)
+//                            .padding(.bottom,10)
+                            .tracking(2)
+//                            .font(.custom("AmericanTypewriter-CondensedLight",size: 20))
+                        Text(records.detail)
+//                            .frame(width:300,height: 300,alignment: .top)
+                            .frame( maxWidth: 350, minHeight:50, maxHeight:500)
+                            .multilineTextAlignment(.center)
+                            .padding(.all,10)
+                            .tracking(1)
+//                            .font(.custom("AmericanTypewriter-CondensedLight",size: 20))
+                        Text(records.place)
+                            .tracking(2)
+                            .padding(.bottom,50)
+//                            .font(.custom("AmericanTypewriter-CondensedLight",size: 20))
+                    }.frame(maxWidth: 350, minHeight:50, maxHeight:500, alignment: .top)
+                        .background(Color.white.opacity(0.15)).cornerRadius(50).padding(.top, 350)
+//                    records.image
+                    ,alignment: .top)
+                }
+            }
+//            }.navigationBarTitle(Text(records.title))
         }
     }
     
-  
     
         //navigastionlink用。選択すると次のページに飛ぶやつ。
         struct ContentView_Previews: PreviewProvider {
