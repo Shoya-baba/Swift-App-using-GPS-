@@ -7,7 +7,10 @@
 
 import SwiftUI
 import CoreLocation
-import UIKit
+import BudouX
+
+
+
 
 let locationManager = CLLocationManager()
 //class見たなやつの親。内容とその型を宣言
@@ -22,6 +25,17 @@ struct Record:Identifiable {
 }
 
 struct ContentView: View {
+    
+    @State var navigated = false
+    
+    @ObservedObject var manager = LocationManager()
+
+        var body: some View {
+            let latetude = $manager.location.wrappedValue.coordinate.latitude
+            let longitude = $manager.location.wrappedValue.coordinate.longitude
+            Text("\(latetude), \(longitude)").padding()
+//        }
+    
     //classのインスタンス化みたいなイメージ
     let records:[Record] = [
         .init(id:0 ,title: "霧の向こう側", image: Image("霧の向こう側"), place: "test", phenomenon: "淡い発光体の浮遊", detail: "歩いていると霧が深くなった。振り返るが霧で何も見えない。自然と前に進む足。すると前の方で奇妙な動きの発光を確認。発光体が近づいて思わず目を閉じる。目を開けたら見覚えのある景色。そして、夏の青空が広がっていた。"),
@@ -31,7 +45,7 @@ struct ContentView: View {
     
    
     
-    var body: some View {
+//    var body: some View {
         NavigationView{
             List{
 //                Section(header:Text("怪奇一覧").font(.title2).tracking(2)){
@@ -57,15 +71,20 @@ struct ContentView: View {
                         }
                     }
                 }.navigationBarTitle(Text("怪奇一覧"),displayMode:.inline)
-//                    .navigationBarItems(
-//                        leading: Button("action",action:AddRecord())
-//                        ,
-//                        trailing: Button(action: {
-//                            AddRecord()
-//                        }) {
-//                            Image(systemName: "plus").foregroundColor(Color.red)
-//                        }
-//                    )
+                    .navigationBarItems(
+                        leading: Button(action: {}, label: {
+                               Text("記憶を消す")
+                           }),
+                           trailing: HStack {
+                               NavigationLink(
+                                   destination: AddRecord(),
+                                   isActive: $navigated,
+                                   label: {
+                                       Text("新たな怪奇")
+                                   }
+                               )
+                           }
+                        )
             }
         }
     }
@@ -90,7 +109,7 @@ struct ContentView: View {
 //                            .padding(.bottom,10)
                             .tracking(2)
 //                            .font(.custom("AmericanTypewriter-CondensedLight",size: 20))
-                        Text(records.detail)
+                        BudouXText(records.detail)
 //                            .frame(width:300,height: 300,alignment: .top)
                             .frame( maxWidth: 350, minHeight:50, maxHeight:500)
                             .multilineTextAlignment(.center)
@@ -123,7 +142,7 @@ struct ContentView: View {
                     TextField("遭遇した怪奇",text: $title)
                     TextField("現象",text: $phenomenon)
                     TextField("詳細",text: $detail)
-                    TextField("遭遇した場所",text: $place)
+                    TextField("遭遇した場所",text: $place,axis: .vertical)
                 }
                 Button(action: {}) {
                     Text("報告")

@@ -15,6 +15,9 @@
 		CEB434352A3765F80062F6A4 /* burariUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434342A3765F80062F6A4 /* burariUITests.swift */; };
 		CEB434372A3765F80062F6A4 /* burariUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */; };
 		CEB434452A38C7C10062F6A4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB434442A38C7C10062F6A4 /* CoreLocation.framework */; };
+		CEB434852A393BEB0062F6A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434842A393BEB0062F6A4 /* AppDelegate.swift */; };
+		CEB434872A39461F0062F6A4 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB434862A39461F0062F6A4 /* LocationManager.swift */; };
+		CEB4348A2A39574E0062F6A4 /* BudouX in Frameworks */ = {isa = PBXBuildFile; productRef = CEB434892A39574E0062F6A4 /* BudouX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,8 @@
 		CEB434342A3765F80062F6A4 /* burariUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariUITests.swift; sourceTree = "<group>"; };
 		CEB434362A3765F80062F6A4 /* burariUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = burariUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CEB434442A38C7C10062F6A4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CEB434842A393BEB0062F6A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEB434862A39461F0062F6A4 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB434452A38C7C10062F6A4 /* CoreLocation.framework in Frameworks */,
+				CEB4348A2A39574E0062F6A4 /* BudouX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,8 @@
 		CEB434182A3765F70062F6A4 /* burari */ = {
 			isa = PBXGroup;
 			children = (
+				CEB434862A39461F0062F6A4 /* LocationManager.swift */,
+				CEB434842A393BEB0062F6A4 /* AppDelegate.swift */,
 				CEB434192A3765F70062F6A4 /* burariApp.swift */,
 				CEB4341B2A3765F70062F6A4 /* ContentView.swift */,
 				CEB4341D2A3765F80062F6A4 /* Assets.xcassets */,
@@ -155,6 +163,9 @@
 			dependencies = (
 			);
 			name = burari;
+			packageProductDependencies = (
+				CEB434892A39574E0062F6A4 /* BudouX */,
+			);
 			productName = burari;
 			productReference = CEB434162A3765F70062F6A4 /* burari.app */;
 			productType = "com.apple.product-type.application";
@@ -227,6 +238,9 @@
 				Base,
 			);
 			mainGroup = CEB4340D2A3765F70062F6A4;
+			packageReferences = (
+				CEB434882A39574E0062F6A4 /* XCRemoteSwiftPackageReference "BudouX.swift" */,
+			);
 			productRefGroup = CEB434172A3765F70062F6A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEB434872A39461F0062F6A4 /* LocationManager.swift in Sources */,
+				CEB434852A393BEB0062F6A4 /* AppDelegate.swift in Sources */,
 				CEB4341C2A3765F70062F6A4 /* ContentView.swift in Sources */,
 				CEB4341A2A3765F70062F6A4 /* burariApp.swift in Sources */,
 			);
@@ -599,6 +615,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEB434882A39574E0062F6A4 /* XCRemoteSwiftPackageReference "BudouX.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/griffin-stewie/BudouX.swift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEB434892A39574E0062F6A4 /* BudouX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEB434882A39574E0062F6A4 /* XCRemoteSwiftPackageReference "BudouX.swift" */;
+			productName = BudouX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEB4340E2A3765F70062F6A4 /* Project object */;
 }
