@@ -1,8 +1,8 @@
 
 
 import SwiftUI
-
-
+import BudouX
+import CoreLocation
 
 struct Record: Identifiable {
     var id = UUID()
@@ -14,6 +14,7 @@ struct Record: Identifiable {
 }
 
 struct ContentView: View {
+  
     @StateObject private var recordStore = RecordStore()
     @State private var path = NavigationPath()
     var body: some View {
@@ -53,6 +54,10 @@ struct RecordsDetail: View {
 
             ZStack {
                 record.image
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:800,height: 950)
+                    
                     .overlay(
                         VStack {
                             Text(record.title)
@@ -63,7 +68,7 @@ struct RecordsDetail: View {
 
                             Text(record.phenomenon)
                                 .tracking(2)
-                            Text(record.detail)
+                            BudouXText(record.detail)
                                 .frame(maxWidth: 350, minHeight: 50, maxHeight: 500)
                                 .multilineTextAlignment(.center)
                                 .padding(.all, 10)
@@ -85,6 +90,9 @@ struct RecordsDetail: View {
                 
 
 struct AddRecord: View {
+    @StateObject private var locationManager = LocationManager()
+    @Environment(\.presentationMode) private var presentationMode
+    
     @State private var title = ""
     @State private var place = ""
     @State private var phenomenon = ""
@@ -100,23 +108,9 @@ struct AddRecord: View {
         Form {
             TextField("タイトル", text: $title)
             TextField("場所", text: $place)
+                //.disabled(true) // 住所を表示するために無効化　逆ジオコーディング用？
             TextField("現象", text: $phenomenon)
             TextField("詳細", text: $detail)
-            
-            Button(action: {
-                let newRecord = Record( title: title, image: Image(uiImage: selectedImage ?? UIImage(named: "デフォルト画像")!), place: place, phenomenon: phenomenon, detail: detail)
-                recordStore.addRecord(newRecord)
-                
-                title = ""
-                place = ""
-                phenomenon = ""
-                detail = ""
-                selectedImage = nil
-                
-       
-            }) {
-                Text("追加")
-            }
             
             Button(action: {
                 imagePickerSourceType = .photoLibrary
@@ -124,13 +118,74 @@ struct AddRecord: View {
             }) {
                 Text("写真を選択")
             }
+            .padding()
+            
         }
-        .navigationBarTitle("新しいレコード")
-        .sheet(isPresented: $showImagePicker) {
-            ImagePicker(sourceType: imagePickerSourceType, selectedImage: $selectedImage)
+        .onAppear {
+            locationManager.startUpdatingLocation()
         }
-    }
-}
+        .onDisappear {
+            locationManager.stopUpdatingLocation()
+        }
+        .onChange(of: locationManager.currentLocation) { location in
+                   if let location = location {
+                       //逆ジオコーディング用
+//                       reverseGeocodeLocation(location: location)
+                       //緯度と経度を返す用
+                       place = "緯度: \(location.coordinate.latitude), 経度: \(location.coordinate.longitude)"
+                   }
+               }
+//          GPS関係追加前付いていた
+//        }
+        .navigationBarTitle("遭遇した怪奇")
+        
+        .navigationBarItems(trailing:
+             Button(action: {
+                 let newRecord = Record(title: title, image: Image(uiImage: selectedImage ?? UIImage(named: "デフォルト画像")!), place: place, phenomenon: phenomenon, detail: detail)
+                 recordStore.addRecord(newRecord)
+                 
+                 title = ""
+                 place = ""
+                 phenomenon = ""
+                 detail = ""
+                 selectedImage = nil
+            presentationMode.wrappedValue.dismiss()
+             }) {
+                 Text("追加")
+             }
+         )
+         .sheet(isPresented: $showImagePicker) {
+             ImagePicker(sourceType: imagePickerSourceType, selectedImage: $selectedImage)
+         }
+     }
+    //緯度と経度から都道府県を求めるコードだがCAと表示される為、外部と繋げる必要あり
+//    private func reverseGeocodeLocation(location: CLLocation) {
+//        let geocoder = CLGeocoder()
+//        geocoder.reverseGeocodeLocation(location) { placemarks, error in
+//            if let error = error {
+//                // 逆ジオコーディングのエラーハンドリング
+//                print("逆ジオコーディングエラー: \(error.localizedDescription)")
+//            } else if let placemark = placemarks?.first {
+//                // 住所を取得してplaceに格納
+//                print("住所取得してるみたい")
+//                if let administrativeArea = placemark.administrativeArea {
+//                    place = administrativeArea
+//                    print("住所取得してるみたい　administrativeArea")
+//                } else {
+//                    // 都道府県が見つからない場合のハンドリング
+//                    place = "Unknown"
+//                }
+//            }
+//        }
+//    }
+ }
+
+
+
+
+
+
+
 
 struct ImagePicker: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIImagePickerController

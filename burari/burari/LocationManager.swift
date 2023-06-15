@@ -6,26 +6,29 @@
 //
 
 import Foundation
-
-import MapKit
+import CoreLocation
 
 class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
-    let manager = CLLocationManager()
-    @Published var location = CLLocation()
-
+    private let locationManager = CLLocationManager()
+    @Published var currentLocation: CLLocation?
+    
     override init() {
         super.init()
-
-        self.manager.delegate = self
-        self.manager.requestWhenInUseAuthorization()
-        self.manager.desiredAccuracy = kCLLocationAccuracyBest
-        self.manager.distanceFilter = 2
-        self.manager.startUpdatingLocation()
+        locationManager.delegate = self
     }
-
-    func locationManager(_ manager: CLLocationManager,
-                           didUpdateLocations locations: [CLLocation]) {
-        self.location = locations.last!
+    
+    func startUpdatingLocation() {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
-
+    
+    func stopUpdatingLocation() {
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.last else { return }
+        currentLocation = location
+    }
 }
+
